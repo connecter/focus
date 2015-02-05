@@ -1,4 +1,4 @@
-FROM java:7-jre
+FROM java:openjdk-7-jre
 
 MAINTAINER Jan Vincent Liwanag <jvliwanag@gmail.com>
 
