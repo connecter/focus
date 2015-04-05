@@ -7,5 +7,6 @@ RUN unzip /jicofo.zip && \
 	mv /jicofo-linux-x64* /opt/jicofo && \
 	rm /jicofo.zip
 
-ENTRYPOINT ["/opt/jicofo/jicofo.sh"]
- 
+ADD tools/start.sh /start.sh
+
+ENTRYPOINT ["/start.sh"]
