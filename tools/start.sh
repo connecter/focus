@@ -16,7 +16,7 @@ while [ "$#" -ne 0 ]; do
 done
 
 if [ ! -z "$PROPS" ]; then
-  echo -e "Setting videobridge properties:$PROPS"
+  echo -e "Setting sip properties:$PROPS"
   mkdir -p $(dirname "$VB_PROPERTIES")
   echo -e  "$PROPS" > "$VB_PROPERTIES"
 fi
