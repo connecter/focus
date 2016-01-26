@@ -1,0 +1,18 @@
+sudo: required
+
+services:
+  - docker
+
+language: java
+
+jdk:
+  - openjdk7
+
+script:
+- make
+- docker build -t jicofo .
+
+after_success:
+- docker tag jicofo connecter/jicofo:travis
+- docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker push connecter/jicofo:travis
